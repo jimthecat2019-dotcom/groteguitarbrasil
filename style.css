@@ -1,0 +1,1626 @@
+/* =========================================================
+   GROTE GUITAR BRASIL
+   STYLE.CSS
+   Visual editorial premium, inspirado em grandes marcas de instrumentos
+   sem copiar identidade visual específica.
+========================================================= */
+
+/* =========================================================
+   DESIGN SYSTEM
+========================================================= */
+
+:root {
+    --preto: #0b0b0b;
+    --preto-2: #151515;
+    --preto-3: #1f1f1f;
+
+    --grafite: #2b2b2b;
+    --cinza-700: #4a4a4a;
+    --cinza-500: #777777;
+    --cinza-300: #cfcfcf;
+    --cinza-200: #e5e5e5;
+    --cinza-100: #f3f3f3;
+    --cinza-050: #f8f8f8;
+
+    --branco: #ffffff;
+
+    --vermelho: #c92b2b;
+    --vermelho-escuro: #9f1f1f;
+
+    --fonte-display: "Oswald", Arial, Helvetica, sans-serif;
+    --fonte-texto: "Inter", Arial, Helvetica, sans-serif;
+
+    --largura: 1240px;
+    --largura-texto: 68ch;
+
+    --raio-sm: 10px;
+    --raio-md: 18px;
+    --raio-lg: 28px;
+
+    --sombra-sm: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --sombra-md: 0 18px 50px rgba(0, 0, 0, 0.12);
+    --sombra-lg: 0 30px 80px rgba(0, 0, 0, 0.18);
+
+    --altura-topo: 82px;
+    --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+
+/* =========================================================
+   RESET / BASE
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--altura-topo) + 24px);
+}
+
+body {
+    margin: 0;
+    background: var(--branco);
+    color: var(--preto);
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img,
+video {
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 0;
+    font-family: var(--fonte-display);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+::selection {
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.container {
+    width: min(var(--largura), 92%);
+    margin-inline: auto;
+}
+
+.secao {
+    padding-block: clamp(72px, 8vw, 120px);
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+.pular-conteudo {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 9999;
+    padding: 12px 16px;
+    background: var(--branco);
+    color: var(--preto);
+    border: 2px solid var(--preto);
+    border-radius: var(--raio-sm);
+    font-weight: 700;
+    text-decoration: none;
+    transform: translateY(-160%);
+    transition: transform 180ms var(--ease);
+}
+
+.pular-conteudo:focus {
+    transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--vermelho);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   BARRA DE ANÚNCIO
+========================================================= */
+
+.barra-anuncio {
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.barra-anuncio-conteudo {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+}
+
+.barra-anuncio p {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.barra-anuncio a {
+    text-decoration: none;
+    opacity: 0.78;
+    transition: opacity 180ms ease;
+}
+
+.barra-anuncio a:hover {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 3000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--cinza-200);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.topo-conteudo {
+    min-height: var(--altura-topo);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 30px;
+}
+
+.marca {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.logo {
+    width: 136px;
+    height: 54px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    min-width: 0;
+}
+
+.menu-principal a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--preto);
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-principal a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 6px;
+    height: 2px;
+    background: var(--preto);
+    transition: right 180ms ease;
+}
+
+.menu-principal a:hover::after {
+    right: 0;
+}
+
+.acoes-topo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+.link-instagram {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.botao-menu {
+    display: none;
+    width: 46px;
+    height: 46px;
+    padding: 10px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.botao-menu span {
+    width: 100%;
+    height: 2px;
+    margin-block: 6px;
+    display: block;
+    background: var(--preto);
+    transition:
+        transform 180ms ease,
+        opacity 180ms ease;
+}
+
+.botao-menu.aberto span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.botao-menu.aberto span:nth-child(2) {
+    opacity: 0;
+}
+
+.botao-menu.aberto span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   BOTÕES / ELEMENTOS REUTILIZÁVEIS
+========================================================= */
+
+.botao {
+    min-height: 48px;
+    padding-inline: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        transform 180ms var(--ease),
+        background 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.botao-topo {
+    min-height: 42px;
+    padding-inline: 18px;
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.botao-topo:hover {
+    background: var(--vermelho);
+}
+
+.botao-claro {
+    background: var(--branco);
+    color: var(--preto);
+    border-color: var(--branco);
+}
+
+.botao-claro:hover {
+    background: transparent;
+    color: var(--branco);
+}
+
+.botao-contorno-claro {
+    background: transparent;
+    color: var(--branco);
+    border-color: rgba(255, 255, 255, 0.65);
+}
+
+.botao-contorno-claro:hover {
+    background: var(--branco);
+    color: var(--preto);
+    border-color: var(--branco);
+}
+
+.botao-escuro {
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.botao-escuro:hover {
+    background: var(--vermelho);
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: var(--cinza-700);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.eyebrow-claro {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.cabecalho-secao {
+    margin-bottom: clamp(36px, 5vw, 64px);
+}
+
+.cabecalho-secao h2 {
+    max-width: 18ch;
+    color: var(--preto);
+    font-size: clamp(2.5rem, 5vw, 5.2rem);
+    text-transform: uppercase;
+}
+
+.cabecalho-com-link {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.link-seta {
+    display: inline-flex;
+    width: max-content;
+    padding-bottom: 3px;
+    border-bottom: 1px solid currentColor;
+    color: var(--preto);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        opacity 180ms ease,
+        transform 180ms var(--ease);
+}
+
+.link-seta:hover {
+    opacity: 0.62;
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    min-height: min(820px, calc(100vh - 116px));
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--preto);
+}
+
+.hero-imagem,
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.78) 0%,
+            rgba(0, 0, 0, 0.47) 40%,
+            rgba(0, 0, 0, 0.08) 72%,
+            rgba(0, 0, 0, 0.02) 100%
+        );
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+    padding-block: clamp(80px, 9vw, 126px);
+    color: var(--branco);
+}
+
+.hero h1 {
+    max-width: 8ch;
+    color: var(--branco);
+    font-size: clamp(4.4rem, 10vw, 9.2rem);
+    text-transform: uppercase;
+}
+
+.hero-texto {
+    max-width: 520px;
+    margin: 24px 0 30px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(1.05rem, 1.5vw, 1.34rem);
+    line-height: 1.5;
+}
+
+.hero-acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   CATEGORIAS
+========================================================= */
+
+.categorias {
+    background: var(--branco);
+}
+
+.grade-categorias {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.categoria-card {
+    position: relative;
+    min-height: 460px;
+    overflow: hidden;
+    background: var(--preto-2);
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.categoria-grande {
+    grid-row: span 2;
+    min-height: 936px;
+}
+
+.categoria-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 650ms var(--ease);
+}
+
+.categoria-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.02) 35%,
+            rgba(0, 0, 0, 0.72) 100%
+        );
+}
+
+.categoria-conteudo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: clamp(26px, 4vw, 44px);
+}
+
+.categoria-conteudo p {
+    margin-bottom: 7px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.categoria-conteudo h3 {
+    color: var(--branco);
+    font-size: clamp(2.3rem, 4vw, 4.8rem);
+    text-transform: uppercase;
+}
+
+.categoria-conteudo span {
+    margin-top: 17px;
+    display: inline-block;
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.categoria-card:hover img {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   DESTAQUE EDITORIAL
+========================================================= */
+
+.destaque-produto {
+    min-height: 760px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(420px, 0.85fr);
+    background: var(--cinza-100);
+}
+
+.destaque-produto-imagem {
+    min-height: 760px;
+    overflow: hidden;
+}
+
+.destaque-produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destaque-produto-copy {
+    padding: clamp(54px, 7vw, 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.destaque-produto-copy h2 {
+    color: var(--preto);
+    font-size: clamp(4rem, 7vw, 7rem);
+    text-transform: uppercase;
+}
+
+.destaque-frase {
+    margin: 22px 0 26px;
+    color: var(--preto);
+    font-family: var(--fonte-display);
+    font-size: clamp(2rem, 3.5vw, 3.8rem);
+    font-weight: 600;
+    line-height: 1.02;
+    text-transform: uppercase;
+}
+
+.destaque-produto-copy > p:not(.eyebrow):not(.destaque-frase) {
+    max-width: 46ch;
+    margin-bottom: 30px;
+    color: var(--cinza-700);
+    font-size: 1.04rem;
+}
+
+
+/* =========================================================
+   PRODUTOS / MODELOS
+========================================================= */
+
+.modelos {
+    background: var(--branco);
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.produto-card {
+    min-width: 0;
+}
+
+.produto-imagem {
+    aspect-ratio: 4 / 5;
+    display: block;
+    overflow: hidden;
+    background: var(--cinza-100);
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 520ms var(--ease);
+}
+
+.produto-card:hover .produto-imagem img {
+    transform: scale(1.035);
+}
+
+.produto-info {
+    padding-top: 18px;
+}
+
+.produto-categoria {
+    margin-bottom: 6px;
+    color: var(--cinza-500);
+    font-size: 0.73rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.produto-info h3 {
+    color: var(--preto);
+    font-size: clamp(1.6rem, 2.1vw, 2.4rem);
+    text-transform: uppercase;
+}
+
+.produto-resumo {
+    margin: 12px 0 14px;
+    color: var(--cinza-700);
+    font-size: 0.91rem;
+    line-height: 1.55;
+}
+
+.produto-info > a {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.produto-info > a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CAMPANHA
+========================================================= */
+
+.campanha {
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--preto);
+}
+
+.campanha-imagem,
+.campanha-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.campanha-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.campanha-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.54) 42%,
+            rgba(0, 0, 0, 0.08) 72%
+        );
+}
+
+.campanha-conteudo {
+    position: relative;
+    z-index: 2;
+    color: var(--branco);
+}
+
+.campanha h2 {
+    max-width: 10ch;
+    margin-bottom: 30px;
+    color: var(--branco);
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.sobre {
+    background: var(--cinza-050);
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(520px, 1.15fr);
+    align-items: center;
+    gap: clamp(50px, 8vw, 110px);
+}
+
+.sobre-copy h2 {
+    max-width: 10ch;
+    color: var(--preto);
+    font-size: clamp(3rem, 5vw, 5.6rem);
+    text-transform: uppercase;
+}
+
+.sobre-copy > p:not(.eyebrow) {
+    max-width: 56ch;
+    margin: 24px 0 0;
+    color: var(--cinza-700);
+    font-size: 1.02rem;
+}
+
+.sobre-copy .link-seta {
+    margin-top: 28px;
+}
+
+.sobre-imagem {
+    margin: 0;
+    min-height: 620px;
+    overflow: hidden;
+    background: var(--cinza-200);
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+    min-height: 620px;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.social {
+    background: var(--branco);
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.social-grid a {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: var(--cinza-100);
+}
+
+.social-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+        transform 500ms var(--ease),
+        filter 240ms ease;
+}
+
+.social-grid a:hover img {
+    transform: scale(1.04);
+    filter: brightness(0.88);
+}
+
+
+/* =========================================================
+   ONDE COMPRAR
+========================================================= */
+
+.onde-comprar {
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.onde-comprar-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(42px, 8vw, 120px);
+}
+
+.onde-comprar h2 {
+    max-width: 10ch;
+    color: var(--branco);
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    text-transform: uppercase;
+}
+
+.onde-comprar p:not(.eyebrow) {
+    max-width: 55ch;
+    margin: 22px 0 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.04rem;
+}
+
+.onde-comprar-acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.contato {
+    background: var(--branco);
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.78fr) minmax(520px, 1.22fr);
+    align-items: start;
+    gap: clamp(50px, 8vw, 110px);
+}
+
+.contato-copy h2 {
+    max-width: 10ch;
+    color: var(--preto);
+    font-size: clamp(3rem, 5vw, 5.4rem);
+    text-transform: uppercase;
+}
+
+.contato-copy > p:not(.eyebrow) {
+    max-width: 48ch;
+    margin-top: 24px;
+    color: var(--cinza-700);
+}
+
+.formulario-contato {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.campo {
+    display: grid;
+    gap: 8px;
+}
+
+.campo-total {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    color: var(--preto);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+    background: var(--cinza-050);
+    color: var(--preto);
+    border: 1px solid var(--cinza-300);
+    border-radius: 0;
+    outline: none;
+    transition:
+        background 180ms ease,
+        border-color 180ms ease;
+}
+
+.campo textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    background: var(--branco);
+    border-color: var(--preto);
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter {
+    padding-block: clamp(60px, 7vw, 90px);
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+.newsletter-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1.2fr);
+    align-items: center;
+    gap: clamp(40px, 8vw, 110px);
+}
+
+.newsletter h2 {
+    color: var(--branco);
+    font-size: clamp(2.6rem, 4vw, 4.3rem);
+    text-transform: uppercase;
+}
+
+.newsletter p:not(.eyebrow) {
+    max-width: 50ch;
+    margin: 14px 0 0;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.newsletter-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.newsletter-form input {
+    min-width: 0;
+    min-height: 56px;
+    padding: 0 18px;
+    background: var(--branco);
+    color: var(--preto);
+    border: 0;
+    border-radius: 0;
+    outline: none;
+}
+
+.newsletter-form button {
+    min-height: 56px;
+    padding-inline: 22px;
+    background: var(--preto);
+    color: var(--branco);
+    border: 0;
+    border-radius: 0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 180ms ease;
+}
+
+.newsletter-form button:hover {
+    background: var(--preto-2);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    background: var(--preto-2);
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.rodape-principal {
+    padding-block: 70px;
+    display: grid;
+    grid-template-columns: minmax(260px, 1.6fr) repeat(3, minmax(140px, 0.7fr));
+    gap: 40px;
+}
+
+.rodape-marca {
+    max-width: 360px;
+}
+
+.rodape-logo {
+    width: 150px;
+    height: 58px;
+    object-fit: contain;
+    object-position: left center;
+    filter: brightness(0) invert(1);
+}
+
+.rodape-marca p {
+    max-width: 34ch;
+    margin: 18px 0 0;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.88rem;
+}
+
+.rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.rodape-coluna h2 {
+    margin-bottom: 7px;
+    color: var(--branco);
+    font-family: var(--fonte-texto);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.rodape-coluna a {
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.84rem;
+    text-decoration: none;
+}
+
+.rodape-coluna a:hover {
+    color: var(--branco);
+}
+
+.rodape-final {
+    min-height: 72px;
+    padding-block: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.76rem;
+}
+
+.rodape-final p {
+    margin: 0;
+}
+
+.rodape-final div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rodape-final a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   VOLTAR AO TOPO
+========================================================= */
+
+.voltar-topo {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 2000;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: var(--preto);
+    color: var(--branco);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: var(--sombra-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition:
+        opacity 180ms ease,
+        visibility 180ms ease,
+        transform 180ms var(--ease),
+        background 180ms ease;
+}
+
+.voltar-topo:hover {
+    background: var(--vermelho);
+}
+
+.voltar-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVO — 1180
+========================================================= */
+
+@media (max-width: 1180px) {
+
+    :root {
+        --altura-topo: 74px;
+    }
+
+    .topo-conteudo {
+        grid-template-columns: auto 1fr auto;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 122px;
+    }
+
+    .menu-principal {
+        gap: 18px;
+    }
+
+    .menu-principal a {
+        font-size: 0.8rem;
+    }
+
+    .link-instagram {
+        display: none;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 18px;
+    }
+
+    .sobre-grid,
+    .contato-grid {
+        grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+        gap: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO — 980
+========================================================= */
+
+@media (max-width: 980px) {
+
+    .botao-menu {
+        display: block;
+        justify-self: end;
+        order: 3;
+    }
+
+    .topo-conteudo {
+        position: relative;
+        grid-template-columns: auto 1fr auto;
+    }
+
+    .acoes-topo {
+        margin-left: auto;
+    }
+
+    .menu-principal {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 20;
+
+        display: none;
+        padding: 18px 4%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        background: var(--branco);
+        border-top: 1px solid var(--cinza-200);
+        border-bottom: 1px solid var(--cinza-200);
+        box-shadow: var(--sombra-md);
+    }
+
+    .menu-principal.aberto {
+        display: flex;
+    }
+
+    .menu-principal a {
+        min-height: 50px;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--cinza-200);
+        font-size: 0.92rem;
+    }
+
+    .menu-principal a:last-child {
+        border-bottom: 0;
+    }
+
+    .menu-principal a::after {
+        display: none;
+    }
+
+    .hero {
+        min-height: 720px;
+    }
+
+    .grade-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria-grande,
+    .categoria-card {
+        grid-row: auto;
+        min-height: 560px;
+    }
+
+    .destaque-produto {
+        min-height: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .destaque-produto-imagem {
+        min-height: 620px;
+    }
+
+    .destaque-produto-copy {
+        padding-block: 70px;
+    }
+
+    .sobre-grid,
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-imagem {
+        min-height: 560px;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .onde-comprar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-principal {
+        grid-template-columns: 1.4fr repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO — 720
+========================================================= */
+
+@media (max-width: 720px) {
+
+    :root {
+        --altura-topo: 68px;
+    }
+
+    .barra-anuncio-conteudo {
+        min-height: 31px;
+        font-size: 0.68rem;
+    }
+
+    .barra-anuncio-conteudo a {
+        display: none;
+    }
+
+    .topo-conteudo {
+        width: 94%;
+    }
+
+    .logo {
+        width: 108px;
+        height: 46px;
+    }
+
+    .acoes-topo {
+        display: none;
+    }
+
+    .hero {
+        min-height: 640px;
+        align-items: flex-end;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.04) 15%,
+                rgba(0, 0, 0, 0.78) 78%,
+                rgba(0, 0, 0, 0.88) 100%
+            );
+    }
+
+    .hero-conteudo {
+        padding-block: 70px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 17vw, 5.8rem);
+    }
+
+    .hero-texto {
+        max-width: 34ch;
+        font-size: 1rem;
+    }
+
+    .hero-acoes {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-acoes .botao {
+        width: 100%;
+    }
+
+    .cabecalho-com-link {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .categoria-grande,
+    .categoria-card {
+        min-height: 480px;
+    }
+
+    .categoria-conteudo {
+        padding: 26px;
+    }
+
+    .destaque-produto-imagem {
+        min-height: 480px;
+    }
+
+    .destaque-produto-copy {
+        padding: 54px 6%;
+    }
+
+    .grade-produtos {
+        grid-template-columns: 1fr;
+        gap: 46px;
+    }
+
+    .produto-imagem {
+        aspect-ratio: 4 / 4.5;
+    }
+
+    .campanha {
+        min-height: 610px;
+    }
+
+    .campanha-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.05) 25%,
+                rgba(0, 0, 0, 0.82) 83%
+            );
+    }
+
+    .campanha-conteudo {
+        align-self: flex-end;
+        padding-bottom: 68px;
+    }
+
+    .sobre-imagem,
+    .sobre-imagem img {
+        min-height: 460px;
+    }
+
+    .social-grid {
+        gap: 6px;
+    }
+
+    .onde-comprar-acoes {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .onde-comprar-acoes .botao {
+        width: 100%;
+    }
+
+    .formulario-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-total {
+        grid-column: auto;
+    }
+
+    .newsletter-form {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .rodape-principal {
+        padding-block: 54px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rodape-marca {
+        grid-column: 1 / -1;
+        margin-bottom: 12px;
+    }
+
+    .rodape-final {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO — 480
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .secao {
+        padding-block: 66px;
+    }
+
+    .cabecalho-secao h2 {
+        font-size: clamp(2.4rem, 13vw, 3.8rem);
+    }
+
+    .hero {
+        min-height: 590px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.2rem, 18vw, 4.9rem);
+    }
+
+    .categoria-grande,
+    .categoria-card {
+        min-height: 410px;
+    }
+
+    .categoria-conteudo h3 {
+        font-size: clamp(2.2rem, 11vw, 3.5rem);
+    }
+
+    .destaque-produto-imagem {
+        min-height: 390px;
+    }
+
+    .destaque-produto-copy h2 {
+        font-size: clamp(3.2rem, 16vw, 4.8rem);
+    }
+
+    .destaque-frase {
+        font-size: clamp(1.8rem, 9vw, 2.7rem);
+    }
+
+    .campanha {
+        min-height: 540px;
+    }
+
+    .campanha h2,
+    .onde-comprar h2 {
+        font-size: clamp(3rem, 14vw, 4.6rem);
+    }
+
+    .sobre-copy h2,
+    .contato-copy h2 {
+        font-size: clamp(2.8rem, 13vw, 4.3rem);
+    }
+
+    .sobre-imagem,
+    .sobre-imagem img {
+        min-height: 380px;
+    }
+
+    .rodape-principal {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-marca {
+        grid-column: auto;
+    }
+
+    .rodape-final div {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .voltar-topo {
+        right: 14px;
+        bottom: 14px;
+        width: 44px;
+        height: 44px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
