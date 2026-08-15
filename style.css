@@ -2834,3 +2834,26 @@ p:not(.eyebrow) {
     object-fit: cover;
     object-position: center;
 }
+
+/* =========================================
+   AJUSTE SOMENTE DA GT-335
+========================================= */
+
+.produto-imagem img[src*="produto-gt335"] {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    transform: scale(0.78) !important;
+
+    background: #f3f3f3;
+}
+
+
+/* mantém a proporção quando passa o mouse */
+.produto-card:hover
+.produto-imagem img[src*="produto-gt335"] {
+    transform: scale(0.81) !important;
+}
