@@ -375,9 +375,9 @@ select:focus-visible {
 ========================================================= */
 
 .logo {
-    width: 310px;
+    width: 260px;
 
-    height: 105px;
+    height: auto;
 
     object-fit: contain;
 
