@@ -13,3 +13,38 @@ window.addEventListener("load", () => {
         behavior: "instant"
     });
 });
+
+/* =========================================
+   ANIMAÇÃO DA GUITARRA
+========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const guitarra = document.querySelector(".hero-imagem img");
+
+    if (!guitarra) return;
+
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    guitarra.classList.add("guitarra-visivel");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+    observer.observe(guitarra);
+
+});
