@@ -2211,3 +2211,53 @@ p:not(.eyebrow) {
     }
 
 }
+
+/* =========================================
+   ANIMAÇÃO DE ENTRADA DA GUITARRA
+========================================= */
+
+.hero-imagem {
+    overflow: hidden;
+}
+
+.hero-imagem img {
+    opacity: 0;
+    transform: translateX(55px) scale(1.08);
+
+    animation: entrada-guitarra 1.8s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    transform-origin: center right;
+    will-change: transform, opacity;
+}
+
+
+/* animação */
+
+@keyframes entrada-guitarra {
+
+    0% {
+        opacity: 0;
+        transform: translateX(55px) scale(1.08);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+}
+
+
+/* acessibilidade */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-imagem img {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+}
