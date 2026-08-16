@@ -2222,10 +2222,11 @@ p:not(.eyebrow) {
 
 .hero-imagem img {
     opacity: 0;
-    transform: translateX(55px) scale(1.08);
+    transform: translateX(100px) scale(1.08);
 
     animation: entrada-guitarra 1.8s
         cubic-bezier(0.22, 1, 0.36, 1)
+        0.6s
         forwards;
 
     transform-origin: center right;
@@ -2239,7 +2240,7 @@ p:not(.eyebrow) {
 
     0% {
         opacity: 0;
-        transform: translateX(55px) scale(1.08);
+        transform: translateX(100px) scale(1.08);
     }
 
     100% {
