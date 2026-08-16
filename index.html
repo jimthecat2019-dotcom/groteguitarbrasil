@@ -14,6 +14,27 @@
 
 
     <!-- =========================================
+         ABRIR SEMPRE NO TOPO
+    ========================================== -->
+
+    <script>
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        if (window.location.hash) {
+            history.replaceState(
+                null,
+                "",
+                window.location.pathname + window.location.search
+            );
+        }
+
+        window.scrollTo(0, 0);
+    </script>
+
+
+    <!-- =========================================
          FAVICON
     ========================================== -->
 
@@ -117,7 +138,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css"
+        href="style.css?v=3"
     >
 
 
@@ -262,7 +283,7 @@
 
 
 
-            <!-- MENU PRINCIPAL -->
+            <!-- MENU -->
 
             <nav
                 class="menu-principal"
@@ -859,7 +880,7 @@
 
 
                     <!-- =================================
-                         GTBS-01
+                         BAIXO
                     ================================== -->
 
                     <article
@@ -930,13 +951,13 @@
 
             <div class="campanha-imagem">
 
-               <div class="campanha-imagem">
-    <img
-        src="banner-grote-musico.png"
-        alt="Músico tocando guitarra Grote semi-hollow vermelha"
-        loading="lazy"
-    >
-</div>
+                <img
+                    src="banner-grote-musico.png"
+                    alt="Músico tocando guitarra Grote semi-hollow vermelha"
+                    loading="lazy"
+                >
+
+            </div>
 
 
             <div class="campanha-overlay"></div>
@@ -1158,9 +1179,7 @@
 
 
                 <!-- =================================
-                     FORMULÁRIO DE CONTATO
-                     ENVIA PARA:
-                     lojaderato@gmail.com
+                     FORMULÁRIO
                 ================================== -->
 
                 <form
@@ -1170,8 +1189,6 @@
                 >
 
 
-                    <!-- ASSUNTO DO E-MAIL -->
-
                     <input
                         type="hidden"
                         name="_subject"
@@ -1179,16 +1196,12 @@
                     >
 
 
-                    <!-- DESATIVA CAPTCHA -->
-
                     <input
                         type="hidden"
                         name="_captcha"
                         value="false"
                     >
 
-
-                    <!-- FORMATO DO E-MAIL -->
 
                     <input
                         type="hidden"
@@ -1202,11 +1215,9 @@
 
                     <div class="campo">
 
-
                         <label for="nome">
                             Nome
                         </label>
-
 
                         <input
                             id="nome"
@@ -1216,20 +1227,17 @@
                             required
                         >
 
-
                     </div>
 
 
 
-                    <!-- E-MAIL -->
+                    <!-- EMAIL -->
 
                     <div class="campo">
-
 
                         <label for="email">
                             E-mail
                         </label>
-
 
                         <input
                             id="email"
@@ -1239,7 +1247,6 @@
                             required
                         >
 
-
                     </div>
 
 
@@ -1248,40 +1255,32 @@
 
                     <div class="campo">
 
-
                         <label for="assunto">
                             Assunto
                         </label>
-
 
                         <select
                             id="assunto"
                             name="assunto"
                         >
 
-
                             <option value="Informações sobre produto">
                                 Informações sobre produto
                             </option>
-
 
                             <option value="Revenda / parceria">
                                 Revenda / parceria
                             </option>
 
-
                             <option value="Imprensa / conteúdo">
                                 Imprensa / conteúdo
                             </option>
-
 
                             <option value="Outro">
                                 Outro
                             </option>
 
-
                         </select>
-
 
                     </div>
 
@@ -1291,11 +1290,9 @@
 
                     <div class="campo campo-total">
 
-
                         <label for="mensagem">
                             Mensagem
                         </label>
-
 
                         <textarea
                             id="mensagem"
@@ -1303,7 +1300,6 @@
                             rows="5"
                             required
                         ></textarea>
-
 
                     </div>
 
@@ -1313,14 +1309,12 @@
 
                     <div class="campo-total">
 
-
                         <button
                             class="botao botao-escuro"
                             type="submit"
                         >
                             Enviar mensagem
                         </button>
-
 
                     </div>
 
@@ -1546,9 +1540,7 @@
 
 
 
-        <!-- =====================================
-             FINAL DO RODAPÉ
-        ====================================== -->
+        <!-- FINAL DO RODAPÉ -->
 
         <div class="container rodape-final">
 
@@ -1603,7 +1595,7 @@
          JAVASCRIPT
     ========================================== -->
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
 
 
 </body>
