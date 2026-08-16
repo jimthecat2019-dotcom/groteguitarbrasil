@@ -1,153 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Grote Guitar Brasil | Guitarras e Baixos</title>
-
-
-    <!-- =========================================
-         ABRIR SEMPRE NO TOPO
-    ========================================== -->
-
-    <script>
-        if ("scrollRestoration" in history) {
-            history.scrollRestoration = "manual";
-        }
-
-        if (window.location.hash) {
-            history.replaceState(
-                null,
-                "",
-                window.location.pathname + window.location.search
-            );
-        }
-
-        window.scrollTo(0, 0);
-    </script>
-
-
-    <!-- =========================================
-         FAVICON
-    ========================================== -->
-
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="96x96"
-        href="./favicon.png"
-    >
-
-    <link
-        rel="shortcut icon"
-        href="./favicon.png"
-    >
-
-    <link
-        rel="apple-touch-icon"
-        href="./favicon.png"
-    >
-
-
-    <!-- =========================================
-         SEO
-    ========================================== -->
-
-    <meta
-        name="description"
-        content="Conheça a Grote Guitar Brasil. Guitarras elétricas, semi-hollow, solid body, headless e baixos para diferentes estilos e sonoridades."
-    >
-
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <meta
-        name="theme-color"
-        content="#111111"
-    >
-
-
-    <!-- =========================================
-         FONTES
-    ========================================== -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- =========================================
-         OPEN GRAPH
-    ========================================== -->
-
-    <meta
-        property="og:locale"
-        content="pt_BR"
-    >
-
-    <meta
-        property="og:type"
-        content="website"
-    >
-
-    <meta
-        property="og:site_name"
-        content="Grote Guitar Brasil"
-    >
-
-    <meta
-        property="og:title"
-        content="Grote Guitar Brasil"
-    >
-
-    <meta
-        property="og:description"
-        content="Guitarras e baixos com personalidade, design e versatilidade."
-    >
-
-    <meta
-        property="og:image"
-        content="hero-grote.jpg"
-    >
-
-
-    <!-- =========================================
-         CSS
-    ========================================== -->
-
-    <link
-        rel="stylesheet"
-        href="style.css?v=3"
-    >
-
-
-    <!-- =========================================
-         AJUSTES DO LOGO
-    ========================================== -->
-
-    <style>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Grote Guitar Brasil | Guitarras e Baixos</title><script>
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+if (!new URLSearchParams(window.location.search).has("modelo") && window.location.hash) {
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+}
+</script>
+<link href="./favicon.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="./favicon.png" rel="shortcut icon"/>
+<link href="./favicon.png" rel="apple-touch-icon"/>
+<meta content="Conheça a Grote Guitar Brasil. Guitarras elétricas, semi-hollow, solid body, headless e baixos para diferentes estilos e sonoridades." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="#111111" name="theme-color"/>
+<!-- Troque pela URL final quando o domínio estiver definido -->
+<!-- <link rel="canonical" href="https://www.seudominio.com.br/"> -->
+<!-- Favicon -->
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="favicon.png" rel="apple-touch-icon"/>
+<!-- Fontes -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Open Graph -->
+<meta content="pt_BR" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="Grote Guitar Brasil" property="og:site_name"/>
+<meta content="Grote Guitar Brasil" property="og:title"/>
+<meta content="Guitarras e baixos com personalidade, design e versatilidade." property="og:description"/>
+<meta content="hero-grote.jpg" property="og:image"/>
+<!-- CSS -->
+<link href="style.css?v=5" rel="stylesheet"/>
+<style>
+        /* Ajuste do logo diretamente no index */
         .logo {
             width: 190px !important;
             height: 74px !important;
@@ -158,9 +47,7 @@
             height: 66px !important;
         }
 
-
         @media (max-width: 720px) {
-
             .logo {
                 width: 150px !important;
                 height: 60px !important;
@@ -170,12 +57,9 @@
                 width: 145px !important;
                 height: 58px !important;
             }
-
         }
 
-
         @media (max-width: 480px) {
-
             .logo {
                 width: 136px !important;
                 height: 54px !important;
@@ -185,1419 +69,682 @@
                 width: 132px !important;
                 height: 52px !important;
             }
-
         }
-
     </style>
-
-</head>
-
-
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/#organization",
+      "name": "Grote Guitar Brasil",
+      "url": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/",
+      "logo": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/logo-grote.png",
+      "sameAs": [
+        "https://www.instagram.com/groteguitarbrasil/",
+        "https://www.grotechina.com/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/#website",
+      "url": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/",
+      "name": "Grote Guitar Brasil",
+      "publisher": {
+        "@id": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/#organization"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/#modelos",
+      "name": "Modelos Grote",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": [
+              "Product",
+              "ProductModel"
+            ],
+            "@id": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/#gr-standard-t",
+            "name": "GR Standard T",
+            "brand": {
+              "@type": "Brand",
+              "name": "Grote"
+            },
+            "category": "Guitarra elétrica solid body",
+            "image": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/produto-gr-standard-t.jpg",
+            "description": "Design familiar com identidade Grote."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": [
+              "Product",
+              "ProductModel"
+            ],
+            "@id": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/#gt-335",
+            "name": "GT-335",
+            "brand": {
+              "@type": "Brand",
+              "name": "Grote"
+            },
+            "category": "Guitarra elétrica semi-hollow",
+            "image": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/produto-gt335.jpg",
+            "description": "Construção semi-hollow e visual marcante."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": [
+              "Product",
+              "ProductModel"
+            ],
+            "@id": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/#gr-headless",
+            "name": "GR Headless",
+            "brand": {
+              "@type": "Brand",
+              "name": "Grote"
+            },
+            "category": "Guitarra elétrica headless",
+            "image": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/produto-gr-headless.jpg",
+            "description": "Formato moderno para uma nova experiência."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": [
+              "Product",
+              "ProductModel"
+            ],
+            "@id": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/#gtbs-01",
+            "name": "GTBS-01",
+            "brand": {
+              "@type": "Brand",
+              "name": "Grote"
+            },
+            "category": "Baixo elétrico",
+            "image": "https://jimthecat2019-dotcom.github.io/groteguitarbrasil/produto-gtbs01.jpg",
+            "description": "Graves definidos em um instrumento versátil."
+          }
+        }
+      ]
+    }
+  ]
+}</script></head>
 <body>
-
-
-    <!-- =========================================
-         ACESSIBILIDADE
-    ========================================== -->
-
-    <a
-        class="pular-conteudo"
-        href="#conteudo"
-    >
+<!-- ACESSIBILIDADE -->
+<a class="pular-conteudo" href="#conteudo">
         Pular para o conteúdo
     </a>
-
-
-
-    <!-- =========================================
+<!-- =========================================
          BARRA SUPERIOR
     ========================================== -->
-
-    <div class="barra-anuncio">
-
-        <div class="container barra-anuncio-conteudo">
-
-            <p>
-                Grote Guitar Brasil
-            </p>
-
-            <a
-                href="https://www.instagram.com/groteguitarbrasil/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+<div class="barra-anuncio">
+<div class="container barra-anuncio-conteudo">
+<p>Grote Guitar Brasil</p>
+<a href="https://www.instagram.com/groteguitarbrasil/" rel="noopener noreferrer" target="_blank">
                 Siga no Instagram
             </a>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =========================================
+</div>
+</div>
+<!-- =========================================
          CABEÇALHO
     ========================================== -->
+<header class="topo" id="topo">
+<div class="container topo-conteudo">
+<a aria-label="Grote Guitar Brasil - início" class="marca" href="#inicio">
+<img alt="Grote Guitar Brasil" class="logo" src="logo-grote.png"/>
+</a>
+<button aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu" class="botao-menu" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<nav aria-label="Navegação principal" class="menu-principal" id="menu-principal">
+<a href="#guitarras">Guitarras</a>
+<a href="#baixos">Baixos</a>
+<a href="#modelos">Modelos</a>
+<a href="#sobre">Sobre</a>
+<a href="#onde-comprar">Onde comprar</a>
 
-    <header
-        class="topo"
-        id="topo"
-    >
-
-        <div class="container topo-conteudo">
-
-
-            <!-- LOGO -->
-
-            <a
-                class="marca"
-                href="#inicio"
-                aria-label="Grote Guitar Brasil - início"
-            >
-
-                <img
-                    class="logo"
-                    src="logo-grote.png"
-                    alt="Grote Guitar Brasil"
-                >
-
-            </a>
-
-
-
-            <!-- MENU MOBILE -->
-
-            <button
-                class="botao-menu"
-                type="button"
-                aria-label="Abrir menu"
-                aria-expanded="false"
-                aria-controls="menu-principal"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-
-
-            <!-- MENU -->
-
-            <nav
-                class="menu-principal"
-                id="menu-principal"
-                aria-label="Navegação principal"
-            >
-
-                <a href="#guitarras">
-                    Guitarras
-                </a>
-
-                <a href="#baixos">
-                    Baixos
-                </a>
-
-                <a href="#modelos">
-                    Modelos
-                </a>
-
-                <a href="#sobre">
-                    Sobre
-                </a>
-
-                <a href="#onde-comprar">
-                    Onde comprar
-                </a>
-
-            </nav>
-
-
-
-            <!-- AÇÕES -->
-
-            <div class="acoes-topo">
-
-                <a
-                    class="link-instagram"
-                    href="https://www.instagram.com/groteguitarbrasil/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+<div class="menu-utilidades-mobile">
+<button class="menu-acao abrir-busca" type="button">Buscar modelos</button>
+<button class="menu-acao abrir-favoritos" type="button">
+            Favoritos <span class="favoritos-contagem">0</span>
+</button>
+</div>
+</nav>
+<div class="acoes-topo">
+<a class="link-instagram" href="https://www.instagram.com/groteguitarbrasil/" rel="noopener noreferrer" target="_blank">
                     Instagram
                 </a>
-
-
-                <a
-                    class="botao botao-topo"
-                    href="#contato"
-                >
+<button aria-label="Buscar modelos" class="icone-topo abrir-busca" title="Buscar modelos" type="button">
+<span aria-hidden="true">⌕</span>
+</button><button aria-label="Abrir favoritos" class="icone-topo abrir-favoritos" title="Favoritos" type="button">
+<span aria-hidden="true">♡</span>
+<span aria-label="0 favoritos" class="favoritos-contagem">0</span>
+</button><a class="botao botao-topo" href="#contato">
                     Contato
                 </a>
-
-            </div>
-
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =========================================
+</div>
+</div>
+</header>
+<!-- =========================================
          CONTEÚDO
     ========================================== -->
-
-    <main id="conteudo">
-
-
-
-        <!-- =====================================
+<main id="conteudo">
+<!-- =====================================
              HERO
         ====================================== -->
-
-        <section
-            class="hero"
-            id="inicio"
-        >
-
-
-            <div class="hero-imagem">
-
-                <img
-                    src="hero-grote.jpg"
-                    alt="Guitarra Grote em destaque"
-                    fetchpriority="high"
-                >
-
-            </div>
-
-
-            <div class="hero-overlay"></div>
-
-
-            <div class="container hero-conteudo">
-
-
-                <p class="eyebrow eyebrow-claro">
+<section class="hero" id="inicio">
+<div class="hero-imagem">
+<img alt="Guitarra Grote em destaque" fetchpriority="high" src="hero-grote.jpg"/>
+</div>
+<div class="hero-overlay"></div>
+<div class="container hero-conteudo">
+<p class="eyebrow eyebrow-claro">
                     Grote Guitar Brasil
                 </p>
-
-
-                <h1>
-                    ENCONTRE<br>
+<h1>
+                    ENCONTRE<br/>
                     O SEU SOM.
                 </h1>
-
-
-                <p class="hero-texto">
-
+<p class="hero-texto">
                     Instrumentos com personalidade para transformar
                     inspiração em música.
-
                 </p>
-
-
-                <div class="hero-acoes">
-
-
-                    <a
-                        class="botao botao-claro"
-                        href="#modelos"
-                    >
+<div class="hero-acoes">
+<a class="botao botao-claro" href="#modelos">
                         Ver modelos
                     </a>
-
-
-                    <a
-                        class="botao botao-contorno-claro"
-                        href="#sobre"
-                    >
+<a class="botao botao-contorno-claro" href="#sobre">
                         Conheça a Grote
                     </a>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================
+</div>
+</div>
+</section>
+<!-- =====================================
              CATEGORIAS
         ====================================== -->
-
-        <section
-            class="categorias secao"
-            id="guitarras"
-        >
-
-
-            <div class="container">
-
-
-                <div class="cabecalho-secao">
-
-                    <p class="eyebrow">
-                        Explore
-                    </p>
-
-                    <h2>
-                        Encontre a sua Grote
-                    </h2>
-
-                </div>
-
-
-
-                <div class="grade-categorias">
-
-
-
-                    <!-- SEMI-HOLLOW -->
-
-                    <a
-                        class="categoria-card categoria-grande"
-                        href="#semi-hollow"
-                    >
-
-                        <img
-                            src="categoria-semi-hollow.jpg"
-                            alt="Guitarra Grote semi-hollow"
-                            loading="lazy"
-                        >
-
-                        <div class="categoria-overlay"></div>
-
-                        <div class="categoria-conteudo">
-
-                            <p>
-                                Clássicas e versáteis
-                            </p>
-
-                            <h3>
-                                Semi-Hollow
-                            </h3>
-
-                            <span>
-                                Explorar →
-                            </span>
-
-                        </div>
-
-                    </a>
-
-
-
-                    <!-- SOLID BODY -->
-
-                    <a
-                        class="categoria-card"
-                        href="#solid-body"
-                    >
-
-                        <img
-                            src="categoria-solid-body.jpg"
-                            alt="Guitarra Grote solid body"
-                            loading="lazy"
-                        >
-
-                        <div class="categoria-overlay"></div>
-
-                        <div class="categoria-conteudo">
-
-                            <p>
-                                Diretas e expressivas
-                            </p>
-
-                            <h3>
-                                Solid Body
-                            </h3>
-
-                            <span>
-                                Explorar →
-                            </span>
-
-                        </div>
-
-                    </a>
-
-
-
-                    <!-- HEADLESS -->
-
-                    <a
-                        class="categoria-card"
-                        href="#headless"
-                    >
-
-                        <img
-                            src="categoria-headless.jpg"
-                            alt="Guitarra Grote headless"
-                            loading="lazy"
-                        >
-
-                        <div class="categoria-overlay"></div>
-
-                        <div class="categoria-conteudo">
-
-                            <p>
-                                Design contemporâneo
-                            </p>
-
-                            <h3>
-                                Headless
-                            </h3>
-
-                            <span>
-                                Explorar →
-                            </span>
-
-                        </div>
-
-                    </a>
-
-
-
-                    <!-- BAIXOS -->
-
-                    <a
-                        class="categoria-card"
-                        href="#baixos"
-                    >
-
-                        <img
-                            src="categoria-baixos.jpg"
-                            alt="Baixo Grote"
-                            loading="lazy"
-                        >
-
-                        <div class="categoria-overlay"></div>
-
-                        <div class="categoria-conteudo">
-
-                            <p>
-                                Graves com presença
-                            </p>
-
-                            <h3>
-                                Baixos
-                            </h3>
-
-                            <span>
-                                Explorar →
-                            </span>
-
-                        </div>
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================
-             DESTAQUE GT-335
+<section class="categorias secao" id="guitarras">
+<div class="container">
+<div class="cabecalho-secao">
+<p class="eyebrow">Explore</p>
+<h2>Encontre a sua Grote</h2>
+</div>
+<div class="grade-categorias">
+<a class="categoria-card categoria-grande" href="#semi-hollow">
+<img alt="Guitarra Grote semi-hollow" loading="lazy" src="categoria-semi-hollow.jpg"/>
+<div class="categoria-overlay"></div>
+<div class="categoria-conteudo">
+<p>Clássicas e versáteis</p>
+<h3>Semi-Hollow</h3>
+<span>Explorar →</span>
+</div>
+</a>
+<a class="categoria-card" href="#solid-body">
+<img alt="Guitarra Grote solid body" loading="lazy" src="categoria-solid-body.jpg"/>
+<div class="categoria-overlay"></div>
+<div class="categoria-conteudo">
+<p>Diretas e expressivas</p>
+<h3>Solid Body</h3>
+<span>Explorar →</span>
+</div>
+</a>
+<a class="categoria-card" href="#headless">
+<img alt="Guitarra Grote headless" loading="lazy" src="categoria-headless.jpg"/>
+<div class="categoria-overlay"></div>
+<div class="categoria-conteudo">
+<p>Design contemporâneo</p>
+<h3>Headless</h3>
+<span>Explorar →</span>
+</div>
+</a>
+<a class="categoria-card" href="#baixos">
+<img alt="Baixo Grote" loading="lazy" src="categoria-baixos.jpg"/>
+<div class="categoria-overlay"></div>
+<div class="categoria-conteudo">
+<p>Graves com presença</p>
+<h3>Baixos</h3>
+<span>Explorar →</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- =====================================
+             DESTAQUE EDITORIAL
         ====================================== -->
-
-        <section
-            class="destaque-produto"
-            id="semi-hollow"
-        >
-
-
-            <div class="destaque-produto-imagem">
-
-                <img
-                    src="destaque-gt335.jpg"
-                    alt="Guitarra Grote GT-335"
-                    loading="lazy"
-                >
-
-            </div>
-
-
-
-            <div class="destaque-produto-copy">
-
-
-                <p class="eyebrow">
-                    Em destaque
-                </p>
-
-
-                <h2>
-                    GT-335
-                </h2>
-
-
-                <p class="destaque-frase">
-
-                    Visual clássico.<br>
+<section class="destaque-produto" id="semi-hollow">
+<div class="destaque-produto-imagem">
+<img alt="Guitarra Grote GT-335" loading="lazy" src="destaque-gt335.jpg"/>
+</div>
+<div class="destaque-produto-copy">
+<p class="eyebrow">Em destaque</p>
+<h2>GT-335</h2>
+<p class="destaque-frase">
+                    Visual clássico.<br/>
                     Presença contemporânea.
-
                 </p>
-
-
-                <p>
-
+<p>
                     Uma semi-hollow para quem procura personalidade,
                     versatilidade e um instrumento que também se destaca
                     visualmente.
-
                 </p>
-
-
-                <a
-                    class="botao botao-escuro"
-                    href="#contato"
-                >
+<a class="botao botao-escuro" href="#contato">
                     Quero saber mais
                 </a>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================
+</div>
+</section>
+<!-- =====================================
              MODELOS
         ====================================== -->
-
-        <section
-            class="modelos secao"
-            id="modelos"
-        >
-
-
-            <div class="container">
-
-
-                <div class="cabecalho-secao cabecalho-com-link">
-
-
-                    <div>
-
-                        <p class="eyebrow">
-                            Destaques
-                        </p>
-
-                        <h2>
-                            Modelos Grote
-                        </h2>
-
-                    </div>
-
-
-                    <a
-                        class="link-seta"
-                        href="#contato"
-                    >
+<section class="modelos secao" id="modelos">
+<div class="container">
+<div class="cabecalho-secao cabecalho-com-link">
+<div>
+<p class="eyebrow">Destaques</p>
+<h2>Modelos Grote</h2>
+</div>
+<a class="link-seta" href="#contato">
                         Falar com a Grote Brasil →
                     </a>
-
-
-                </div>
-
-
-
-                <div class="grade-produtos">
-
-
-
-                    <!-- =================================
-                         GR STANDARD T
-                    ================================== -->
-
-                    <article
-                        class="produto-card"
-                        id="solid-body"
-                    >
-
-
-                        <a
-                            class="produto-imagem"
-                            href="#contato"
-                        >
-
-                            <img
-                                src="produto-gr-standard-t.jpg"
-                                alt="Grote GR Standard T"
-                                loading="lazy"
-                            >
-
-                        </a>
-
-
-                        <div class="produto-info">
-
-
-                            <p class="produto-categoria">
+</div>
+<div class="grade-produtos">
+<article class="produto-card" data-modelo-anchor="solid-body" data-modelo-categoria="Solid Body" data-modelo-descricao="Design familiar com identidade Grote." data-modelo-id="gr-standard-t" data-modelo-imagem="produto-gr-standard-t.jpg" data-modelo-nome="GR Standard T" data-modelo-termos="guitarra guitarra elétrica solid body standard t tradicional familiar" id="solid-body">
+<div class="produto-media"><a class="produto-imagem" href="#contato">
+<img alt="Grote GR Standard T" loading="lazy" src="produto-gr-standard-t.jpg"/>
+</a><button aria-label="Adicionar GR Standard T aos favoritos" aria-pressed="false" class="favorito-btn" data-favorito="gr-standard-t" title="Adicionar aos favoritos" type="button">
+<span aria-hidden="true">♡</span>
+</button></div>
+<div class="produto-info">
+<p class="produto-categoria">
                                 Solid Body
                             </p>
-
-
-                            <h3>
-                                GR Standard T
-                            </h3>
-
-
-                            <p class="produto-resumo">
+<h3>GR Standard T</h3>
+<p class="produto-resumo">
                                 Design familiar com identidade Grote.
                             </p>
-
-
-                            <a href="#contato">
+<div class="produto-acoes"><a href="#contato">
                                 Ver detalhes →
-                            </a>
-
-
-                        </div>
-
-
-                    </article>
-
-
-
-                    <!-- =================================
-                         GT-335
-                    ================================== -->
-
-                    <article class="produto-card">
-
-
-                        <a
-                            class="produto-imagem"
-                            href="#contato"
-                        >
-
-                            <img
-                                src="produto-gt335.jpg"
-                                alt="Grote GT-335"
-                                loading="lazy"
-                            >
-
-                        </a>
-
-
-                        <div class="produto-info">
-
-
-                            <p class="produto-categoria">
+                            </a><button class="compartilhar-modelo" data-compartilhar="gr-standard-t" type="button">
+                Compartilhar
+            </button></div>
+</div>
+</article>
+<article class="produto-card" data-modelo-categoria="Semi-Hollow" data-modelo-descricao="Construção semi-hollow e visual marcante." data-modelo-id="gt-335" data-modelo-imagem="produto-gt335.jpg" data-modelo-nome="GT-335" data-modelo-termos="guitarra guitarra elétrica semi hollow semi-hollow gt335 gt-335 clássica versátil" id="modelo-gt335">
+<div class="produto-media"><a class="produto-imagem" href="#contato">
+<img alt="Grote GT-335" loading="lazy" src="produto-gt335.jpg"/>
+</a><button aria-label="Adicionar GT-335 aos favoritos" aria-pressed="false" class="favorito-btn" data-favorito="gt-335" title="Adicionar aos favoritos" type="button">
+<span aria-hidden="true">♡</span>
+</button></div>
+<div class="produto-info">
+<p class="produto-categoria">
                                 Semi-Hollow
                             </p>
-
-
-                            <h3>
-                                GT-335
-                            </h3>
-
-
-                            <p class="produto-resumo">
+<h3>GT-335</h3>
+<p class="produto-resumo">
                                 Construção semi-hollow e visual marcante.
                             </p>
-
-
-                            <a href="#contato">
+<div class="produto-acoes"><a href="#contato">
                                 Ver detalhes →
-                            </a>
-
-
-                        </div>
-
-
-                    </article>
-
-
-
-                    <!-- =================================
-                         GR HEADLESS
-                    ================================== -->
-
-                    <article
-                        class="produto-card"
-                        id="headless"
-                    >
-
-
-                        <a
-                            class="produto-imagem"
-                            href="#contato"
-                        >
-
-                            <img
-                                src="produto-gr-headless.jpg"
-                                alt="Guitarra Grote GR Headless"
-                                loading="lazy"
-                            >
-
-                        </a>
-
-
-                        <div class="produto-info">
-
-
-                            <p class="produto-categoria">
+                            </a><button class="compartilhar-modelo" data-compartilhar="gt-335" type="button">
+                Compartilhar
+            </button></div>
+</div>
+</article>
+<article class="produto-card" data-modelo-anchor="headless" data-modelo-categoria="Headless" data-modelo-descricao="Formato moderno para uma nova experiência." data-modelo-id="gr-headless" data-modelo-imagem="produto-gr-headless.jpg" data-modelo-nome="GR Headless" data-modelo-termos="guitarra guitarra elétrica headless moderna moderno contemporâneo gr headless" id="headless">
+<div class="produto-media"><a class="produto-imagem" href="#contato">
+<img alt="Guitarra Grote GR Headless" loading="lazy" src="produto-gr-headless.jpg"/>
+</a><button aria-label="Adicionar GR Headless aos favoritos" aria-pressed="false" class="favorito-btn" data-favorito="gr-headless" title="Adicionar aos favoritos" type="button">
+<span aria-hidden="true">♡</span>
+</button></div>
+<div class="produto-info">
+<p class="produto-categoria">
                                 Headless
                             </p>
-
-
-                            <h3>
-                                GR Headless
-                            </h3>
-
-
-                            <p class="produto-resumo">
+<h3>GR Headless</h3>
+<p class="produto-resumo">
                                 Formato moderno para uma nova experiência.
                             </p>
-
-
-                            <a href="#contato">
+<div class="produto-acoes"><a href="#contato">
                                 Ver detalhes →
-                            </a>
-
-
-                        </div>
-
-
-                    </article>
-
-
-
-                    <!-- =================================
-                         BAIXO
-                    ================================== -->
-
-                    <article
-                        class="produto-card"
-                        id="baixos"
-                    >
-
-
-                        <a
-                            class="produto-imagem"
-                            href="#contato"
-                        >
-
-                            <img
-                                src="produto-gtbs01.jpg"
-                                alt="Baixo Grote GTBS-01"
-                                loading="lazy"
-                            >
-
-                        </a>
-
-
-                        <div class="produto-info">
-
-
-                            <p class="produto-categoria">
+                            </a><button class="compartilhar-modelo" data-compartilhar="gr-headless" type="button">
+                Compartilhar
+            </button></div>
+</div>
+</article>
+<article class="produto-card" data-modelo-anchor="baixos" data-modelo-categoria="Baixo" data-modelo-descricao="Graves definidos em um instrumento versátil." data-modelo-id="gtbs-01" data-modelo-imagem="produto-gtbs01.jpg" data-modelo-nome="GTBS-01" data-modelo-termos="baixo baixo elétrico gtbs gtbs01 gtbs-01 graves versátil" id="baixos">
+<div class="produto-media"><a class="produto-imagem" href="#contato">
+<img alt="Baixo Grote GTBS-01" loading="lazy" src="produto-gtbs01.jpg"/>
+</a><button aria-label="Adicionar GTBS-01 aos favoritos" aria-pressed="false" class="favorito-btn" data-favorito="gtbs-01" title="Adicionar aos favoritos" type="button">
+<span aria-hidden="true">♡</span>
+</button></div>
+<div class="produto-info">
+<p class="produto-categoria">
                                 Baixo
                             </p>
-
-
-                            <h3>
-                                GTBS-01
-                            </h3>
-
-
-                            <p class="produto-resumo">
+<h3>GTBS-01</h3>
+<p class="produto-resumo">
                                 Graves definidos em um instrumento versátil.
                             </p>
-
-
-                            <a href="#contato">
+<div class="produto-acoes"><a href="#contato">
                                 Ver detalhes →
-                            </a>
-
-
-                        </div>
-
-
-                    </article>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================
+                            </a><button class="compartilhar-modelo" data-compartilhar="gtbs-01" type="button">
+                Compartilhar
+            </button></div>
+</div>
+</article>
+</div>
+</div>
+</section><section class="quiz-cta secao" id="encontre-sua-grote">
+<div class="container quiz-cta-grid">
+<div class="quiz-cta-copy">
+<p class="eyebrow">Encontre sua Grote</p>
+<h2>QUAL MODELO COMBINA COM VOCÊ?</h2>
+<p>Responda algumas perguntas rápidas e veja qual dos modelos em destaque mais combina com o seu perfil.</p>
+</div>
+<div class="quiz-cta-acao">
+<button class="botao botao-claro abrir-quiz" type="button">Fazer o quiz</button>
+<span>Leva menos de um minuto.</span>
+</div>
+</div>
+</section>
+<!-- =====================================
              BANNER / CAMPANHA
         ====================================== -->
-
-        <section class="campanha">
-
-
-            <div class="campanha-imagem">
-
-                <img
-                    src="banner-grote-musico.png"
-                    alt="Músico tocando guitarra Grote semi-hollow vermelha"
-                    loading="lazy"
-                >
-
-            </div>
-
-
-            <div class="campanha-overlay"></div>
-
-
-            <div class="container campanha-conteudo">
-
-
-                <p class="eyebrow eyebrow-claro">
+<section class="campanha">
+<div class="campanha-imagem">
+<img alt="Músico tocando guitarra Grote semi-hollow vermelha" loading="lazy" src="banner-grote-musico.png"/>
+</div>
+<div class="campanha-overlay"></div>
+<div class="container campanha-conteudo">
+<p class="eyebrow eyebrow-claro">
                     Grote Guitar Brasil
                 </p>
-
-
-                <h2>
-
-                    O instrumento certo<br>
+<h2>
+                    O instrumento certo<br/>
                     muda a forma de tocar.
-
                 </h2>
-
-
-                <a
-                    class="botao botao-claro"
-                    href="#onde-comprar"
-                >
+<a class="botao botao-claro" href="#onde-comprar">
                     Onde comprar
                 </a>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================
+</div>
+</section>
+<!-- =====================================
              SOBRE
         ====================================== -->
-
-        <section
-            class="sobre secao"
-            id="sobre"
-        >
-
-
-            <div class="container sobre-grid">
-
-
-                <div class="sobre-copy">
-
-
-                    <p class="eyebrow">
-                        Sobre a marca
-                    </p>
-
-
-                    <h2>
+<section class="sobre secao" id="sobre">
+<div class="container sobre-grid">
+<div class="sobre-copy">
+<p class="eyebrow">Sobre a marca</p>
+<h2>
                         Grote para músicos que querem explorar.
                     </h2>
-
-
-                    <p>
-
+<p>
                         Do visual clássico às propostas modernas, a Grote
                         reúne instrumentos elétricos para diferentes estilos,
                         repertórios e formas de tocar.
-
                     </p>
-
-
-                    <p>
-
+<p>
                         A Grote Guitar Brasil aproxima os músicos brasileiros
                         da marca, apresenta modelos, novidades e informações
                         para quem quer conhecer melhor os instrumentos.
-
                     </p>
-
-
-                    <a
-                        class="link-seta"
-                        href="https://www.grotechina.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+<a class="link-seta" href="https://www.grotechina.com/" rel="noopener noreferrer" target="_blank">
                         Conheça o site internacional →
                     </a>
-
-
-                </div>
-
-
-
-                <figure class="sobre-imagem">
-
-                    <img
-                        src="sobre-grote.jpg"
-                        alt="Guitarras Grote"
-                        loading="lazy"
-                    >
-
-                </figure>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================
-             ONDE COMPRAR
+</div>
+<figure class="sobre-imagem">
+<img alt="Guitarras Grote" loading="lazy" src="sobre-grote.jpg"/>
+</figure>
+</div>
+</section>
+<!-- =====================================
+             INSTAGRAM
         ====================================== -->
 
-        <section
-            class="onde-comprar secao"
-            id="onde-comprar"
-        >
-
-
-            <div class="container onde-comprar-grid">
-
-
-                <div>
-
-
-                    <p class="eyebrow eyebrow-claro">
+<!-- =====================================
+             ONDE COMPRAR
+        ====================================== -->
+<section class="onde-comprar secao" id="onde-comprar">
+<div class="container onde-comprar-grid">
+<div>
+<p class="eyebrow eyebrow-claro">
                         Encontre sua Grote
                     </p>
-
-
-                    <h2>
+<h2>
                         Onde comprar
                     </h2>
-
-
-                    <p>
-
+<p>
                         Consulte os canais da Grote Guitar Brasil para
                         informações sobre modelos, disponibilidade e
                         revendedores.
-
                     </p>
-
-
-                </div>
-
-
-
-                <div class="onde-comprar-acoes">
-
-
-                    <a
-                        class="botao botao-claro"
-                        href="https://www.instagram.com/groteguitarbrasil/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+</div>
+<div class="onde-comprar-acoes">
+<a class="botao botao-claro" href="https://www.instagram.com/groteguitarbrasil/" rel="noopener noreferrer" target="_blank">
                         Falar pelo Instagram
                     </a>
-
-
-                    <a
-                        class="botao botao-contorno-claro"
-                        href="#contato"
-                    >
+<a class="botao botao-contorno-claro" href="#contato">
                         Entrar em contato
                     </a>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================
+</div>
+</div>
+</section>
+<!-- =====================================
              CONTATO
         ====================================== -->
-
-        <section
-            class="contato secao"
-            id="contato"
-        >
-
-
-            <div class="container contato-grid">
-
-
-                <div class="contato-copy">
-
-
-                    <p class="eyebrow">
+<section class="contato secao" id="contato">
+<div class="container contato-grid">
+<div class="contato-copy">
+<p class="eyebrow">
                         Contato
                     </p>
-
-
-                    <h2>
+<h2>
                         Quer conhecer um modelo Grote?
                     </h2>
-
-
-                    <p>
-
+<p>
                         Entre em contato para informações sobre instrumentos,
                         disponibilidade, lojas parceiras e novidades.
-
                     </p>
+</div>
+<form action="https://formsubmit.co/lojaderato@gmail.com" class="formulario-contato" method="POST"><input name="_subject" type="hidden" value="Novo contato - Site Grote Guitar Brasil"/><input name="_captcha" type="hidden" value="false"/><input name="_template" type="hidden" value="table"/>
 
-
-                </div>
-
-
-
-                <!-- =================================
-                     FORMULÁRIO
-                ================================== -->
-
-                <form
-                    class="formulario-contato"
-                    action="https://formsubmit.co/lojaderato@gmail.com"
-                    method="POST"
-                >
-
-
-                    <input
-                        type="hidden"
-                        name="_subject"
-                        value="Novo contato - Site Grote Guitar Brasil"
-                    >
-
-
-                    <input
-                        type="hidden"
-                        name="_captcha"
-                        value="false"
-                    >
-
-
-                    <input
-                        type="hidden"
-                        name="_template"
-                        value="table"
-                    >
-
-
-
-                    <!-- NOME -->
-
-                    <div class="campo">
-
-                        <label for="nome">
-                            Nome
-                        </label>
-
-                        <input
-                            id="nome"
-                            name="nome"
-                            type="text"
-                            autocomplete="name"
-                            required
-                        >
-
-                    </div>
-
-
-
-                    <!-- EMAIL -->
-
-                    <div class="campo">
-
-                        <label for="email">
-                            E-mail
-                        </label>
-
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            autocomplete="email"
-                            required
-                        >
-
-                    </div>
-
-
-
-                    <!-- ASSUNTO -->
-
-                    <div class="campo">
-
-                        <label for="assunto">
-                            Assunto
-                        </label>
-
-                        <select
-                            id="assunto"
-                            name="assunto"
-                        >
-
-                            <option value="Informações sobre produto">
-                                Informações sobre produto
-                            </option>
-
-                            <option value="Revenda / parceria">
-                                Revenda / parceria
-                            </option>
-
-                            <option value="Imprensa / conteúdo">
-                                Imprensa / conteúdo
-                            </option>
-
-                            <option value="Outro">
-                                Outro
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-
-                    <!-- MENSAGEM -->
-
-                    <div class="campo campo-total">
-
-                        <label for="mensagem">
-                            Mensagem
-                        </label>
-
-                        <textarea
-                            id="mensagem"
-                            name="mensagem"
-                            rows="5"
-                            required
-                        ></textarea>
-
-                    </div>
-
-
-
-                    <!-- BOTÃO -->
-
-                    <div class="campo-total">
-
-                        <button
-                            class="botao botao-escuro"
-                            type="submit"
-                        >
+<div class="campo">
+<label for="nome">Nome</label>
+<input autocomplete="name" id="nome" name="nome" required="" type="text"/>
+</div>
+<div class="campo">
+<label for="email">E-mail</label>
+<input autocomplete="email" id="email" name="email" required="" type="email"/>
+</div>
+<div class="campo">
+<label for="assunto">Assunto</label>
+<select id="assunto" name="assunto">
+<option value="produto">Informações sobre produto</option>
+<option value="revenda">Revenda / parceria</option>
+<option value="imprensa">Imprensa / conteúdo</option>
+<option value="outro">Outro</option>
+</select>
+</div>
+<div class="campo campo-total">
+<label for="mensagem">Mensagem</label>
+<textarea id="mensagem" name="mensagem" required="" rows="5"></textarea>
+</div>
+<div class="campo-total">
+<button class="botao botao-escuro" type="submit">
                             Enviar mensagem
                         </button>
-
-                    </div>
-
-
-                </form>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================
+</div>
+</form>
+</div>
+</section>
+<!-- =====================================
              NEWSLETTER
         ====================================== -->
-
-        <section class="newsletter">
-
-
-            <div class="container newsletter-grid">
-
-
-                <div>
-
-
-                    <p class="eyebrow eyebrow-claro">
+<section class="newsletter">
+<div class="container newsletter-grid">
+<div>
+<p class="eyebrow eyebrow-claro">
                         Novidades
                     </p>
-
-
-                    <h2>
+<h2>
                         Fique por dentro da Grote.
                     </h2>
-
-
-                    <p>
-
+<p>
                         Novos modelos, demonstrações e novidades da
                         Grote Guitar Brasil.
-
                     </p>
-
-
-                </div>
-
-
-
-                <form
-                    class="newsletter-form"
-                    action="#"
-                    method="post"
-                >
-
-
-                    <label
-                        class="sr-only"
-                        for="newsletter-email"
-                    >
+</div>
+<form action="#" class="newsletter-form" method="post">
+<label class="sr-only" for="newsletter-email">
                         Seu e-mail
                     </label>
-
-
-                    <input
-                        id="newsletter-email"
-                        name="email"
-                        type="email"
-                        placeholder="Seu e-mail"
-                        autocomplete="email"
-                        required
-                    >
-
-
-                    <button type="submit">
+<input autocomplete="email" id="newsletter-email" name="email" placeholder="Seu e-mail" required="" type="email"/>
+<button type="submit">
                         Cadastrar
                     </button>
-
-
-                </form>
-
-
-            </div>
-
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =========================================
+</form>
+</div>
+</section>
+</main>
+<!-- =========================================
          RODAPÉ
     ========================================== -->
-
-    <footer class="rodape">
-
-
-        <div class="container rodape-principal">
-
-
-
-            <!-- MARCA -->
-
-            <div class="rodape-marca">
-
-
-                <img
-                    src="logo-grote.png"
-                    alt="Grote Guitar Brasil"
-                    class="rodape-logo"
-                >
-
-
-                <p>
-
+<footer class="rodape">
+<div class="container rodape-principal">
+<div class="rodape-marca">
+<img alt="Grote Guitar Brasil" class="rodape-logo" src="logo-grote.png"/>
+<p>
                     Guitarras e baixos para músicos que querem
                     encontrar sua própria voz.
-
                 </p>
-
-
-            </div>
-
-
-
-            <!-- PRODUTOS -->
-
-            <div class="rodape-coluna">
-
-
-                <h2>
-                    Produtos
-                </h2>
-
-
-                <a href="#semi-hollow">
-                    Semi-Hollow
-                </a>
-
-
-                <a href="#solid-body">
-                    Solid Body
-                </a>
-
-
-                <a href="#headless">
-                    Headless
-                </a>
-
-
-                <a href="#baixos">
-                    Baixos
-                </a>
-
-
-            </div>
-
-
-
-            <!-- GROTE BRASIL -->
-
-            <div class="rodape-coluna">
-
-
-                <h2>
-                    Grote Brasil
-                </h2>
-
-
-                <a href="#sobre">
-                    Sobre
-                </a>
-
-
-                <a href="#onde-comprar">
-                    Onde comprar
-                </a>
-
-
-                <a href="#contato">
-                    Contato
-                </a>
-
-
-            </div>
-
-
-
-            <!-- REDES -->
-
-            <div class="rodape-coluna">
-
-
-                <h2>
-                    Redes
-                </h2>
-
-
-                <a
-                    href="https://www.instagram.com/groteguitarbrasil/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+</div>
+<div class="rodape-coluna">
+<h2>Produtos</h2>
+<a href="#semi-hollow">Semi-Hollow</a>
+<a href="#solid-body">Solid Body</a>
+<a href="#headless">Headless</a>
+<a href="#baixos">Baixos</a>
+</div>
+<div class="rodape-coluna">
+<h2>Grote Brasil</h2>
+<a href="#sobre">Sobre</a>
+<a href="#onde-comprar">Onde comprar</a>
+<a href="#contato">Contato</a>
+</div>
+<div class="rodape-coluna">
+<h2>Redes</h2>
+<a href="https://www.instagram.com/groteguitarbrasil/" rel="noopener noreferrer" target="_blank">
                     Instagram
                 </a>
-
-
-                <a
-                    href="https://www.grotechina.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+<a href="https://www.grotechina.com/" rel="noopener noreferrer" target="_blank">
                     Grote internacional
                 </a>
-
-
-            </div>
-
-
-        </div>
-
-
-
-        <!-- FINAL DO RODAPÉ -->
-
-        <div class="container rodape-final">
-
-
-            <p>
-
-                © <span id="ano-atual"></span>
-                Grote Guitar Brasil.
+</div>
+</div>
+<div class="container rodape-final">
+<p>
+                © <span id="ano-atual"></span> Grote Guitar Brasil.
                 Todos os direitos reservados.
-
             </p>
-
-
-            <div>
-
-
-                <a href="#">
-                    Política de privacidade
-                </a>
-
-
-                <a href="#">
-                    Termos de uso
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-
-    </footer>
-
-
-
-    <!-- =========================================
-         VOLTAR AO TOPO
-    ========================================== -->
-
-    <button
-        class="voltar-topo"
-        type="button"
-        aria-label="Voltar ao topo"
-    >
+<div>
+<a href="#">Política de privacidade</a>
+<a href="#">Termos de uso</a>
+</div>
+</div>
+</footer>
+<!-- VOLTAR AO TOPO -->
+<button aria-label="Voltar ao topo" class="voltar-topo" type="button">
         ↑
     </button>
-
-
-
-    <!-- =========================================
-         JAVASCRIPT
-    ========================================== -->
-
-    <script src="script.js?v=3"></script>
-
-
+<!-- JS -->
+<dialog aria-labelledby="titulo-busca" class="modal" id="modal-busca">
+<div class="modal-conteudo">
+<button aria-label="Fechar busca" class="modal-fechar" data-fechar-modal="" type="button">×</button>
+<p class="eyebrow">Modelos Grote</p>
+<h2 id="titulo-busca">Buscar modelos</h2>
+<form class="busca-form" role="search">
+<label class="sr-only" for="busca-modelos">Buscar modelo</label>
+<input autocomplete="off" id="busca-modelos" placeholder="GT-335, headless, baixo, semi-hollow..." type="search"/>
+</form>
+<div aria-live="polite" class="busca-resultados" id="busca-resultados"></div>
+</div>
+</dialog><dialog aria-labelledby="titulo-favoritos" class="modal" id="modal-favoritos">
+<div class="modal-conteudo">
+<button aria-label="Fechar favoritos" class="modal-fechar" data-fechar-modal="" type="button">×</button>
+<p class="eyebrow">Sua seleção</p>
+<h2 id="titulo-favoritos">Meus favoritos</h2>
+<div aria-live="polite" class="favoritos-lista" id="favoritos-lista"></div>
+</div>
+</dialog><dialog aria-labelledby="titulo-compartilhar" class="modal modal-compartilhar" id="modal-compartilhar">
+<div class="modal-conteudo">
+<button aria-label="Fechar compartilhamento" class="modal-fechar" data-fechar-modal="" type="button">×</button>
+<p class="eyebrow">Compartilhar modelo</p>
+<h2 id="titulo-compartilhar">Compartilhar</h2>
+<div class="compartilhar-opcoes">
+<a class="botao botao-escuro" href="#" id="compartilhar-whatsapp" rel="noopener noreferrer" target="_blank">WhatsApp</a>
+<button class="botao botao-contorno" id="copiar-link-modelo" type="button">Copiar link</button>
+<button class="botao botao-contorno" id="compartilhar-nativo" type="button">Mais opções</button>
+</div>
+<p aria-live="polite" class="feedback-copia" id="feedback-copia"></p>
+</div>
+</dialog><dialog aria-labelledby="titulo-quiz" class="modal modal-quiz" id="modal-quiz">
+<div class="modal-conteudo">
+<button aria-label="Fechar quiz" class="modal-fechar" data-fechar-modal="" type="button">×</button>
+<p class="eyebrow">Encontre sua Grote</p>
+<h2 id="titulo-quiz">Qual modelo combina com você?</h2>
+<form class="quiz-form" id="quiz-grote">
+<fieldset>
+<legend>1. O que você procura?</legend>
+<label><input name="instrumento" required="" type="radio" value="guitarra"/> Guitarra</label>
+<label><input name="instrumento" type="radio" value="baixo"/> Baixo</label>
+</fieldset>
+<fieldset>
+<legend>2. Qual visual mais chama sua atenção?</legend>
+<label><input name="estilo" required="" type="radio" value="classico"/> Clássico</label>
+<label><input name="estilo" type="radio" value="direto"/> Direto e familiar</label>
+<label><input name="estilo" type="radio" value="moderno"/> Moderno</label>
+</fieldset>
+<fieldset>
+<legend>3. Qual formato você prefere?</legend>
+<label><input name="formato" required="" type="radio" value="semi-hollow"/> Semi-Hollow</label>
+<label><input name="formato" type="radio" value="solid-body"/> Solid Body</label>
+<label><input name="formato" type="radio" value="headless"/> Headless</label>
+<label><input name="formato" type="radio" value="sem-preferencia"/> Sem preferência</label>
+</fieldset>
+<fieldset>
+<legend>4. O que pesa mais na escolha?</legend>
+<label><input name="prioridade" required="" type="radio" value="versatilidade"/> Versatilidade</label>
+<label><input name="prioridade" type="radio" value="visual"/> Visual marcante</label>
+<label><input name="prioridade" type="radio" value="familiar"/> Sensação familiar</label>
+<label><input name="prioridade" type="radio" value="contemporaneo"/> Proposta contemporânea</label>
+</fieldset>
+<fieldset>
+<legend>5. Qual é o seu nível?</legend>
+<label><input name="nivel" required="" type="radio" value="iniciante"/> Estou começando</label>
+<label><input name="nivel" type="radio" value="intermediario"/> Intermediário</label>
+<label><input name="nivel" type="radio" value="experiente"/> Experiente</label>
+</fieldset>
+<button class="botao botao-escuro" type="submit">Ver minha Grote</button>
+</form>
+<div aria-live="polite" class="quiz-resultado" hidden="" id="quiz-resultado">
+<p class="eyebrow">Sua recomendação</p>
+<h3 id="quiz-resultado-nome"></h3>
+<p id="quiz-resultado-texto"></p>
+<button class="botao botao-escuro" id="quiz-ver-modelo" type="button">Ver modelo</button>
+<button class="link-botao" id="quiz-refazer" type="button">Refazer quiz</button>
+</div>
+</div>
+</dialog><script src="script.js?v=5"></script>
 </body>
-
 </html>
